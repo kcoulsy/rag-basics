@@ -10,10 +10,12 @@
   },
   "devDependencies": {
     "@hono/vite-dev-server": "^0.26.0",
+    "@types/node": "^25.9.2",
     "typescript": "~6.0.2",
     "vite": "^8.0.12"
   },
   "dependencies": {
-    "hono": "^4.12.23"
+    "hono": "^4.12.23",
+    "openai": "^6.42.0"
   }
 }
