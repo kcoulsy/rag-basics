@@ -1,21 +1,27 @@
 {
   "name": "rag-basics",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check"
+  },
+  "dependencies": {
+    "@hono/zod-openapi": "^1.4.0",
+    "@hono/zod-validator": "^0.8.0",
+    "hono": "^4.12.23",
+    "openai": "^6.42.0",
+    "oxfmt": "^0.53.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@hono/vite-dev-server": "^0.26.0",
     "@types/node": "^25.9.2",
     "typescript": "~6.0.2",
     "vite": "^8.0.12"
-  },
-  "dependencies": {
-    "hono": "^4.12.23",
-    "openai": "^6.42.0"
   }
 }
