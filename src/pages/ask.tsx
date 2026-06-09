@@ -41,9 +41,66 @@ export function AskPage() {
           </form>
           <div id="result" class="mt-4 hidden space-y-3" />
         </main>
+
+        <div
+          id="source-modal"
+          class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40"
+        >
+          <div class="bg-white rounded-lg shadow-lg w-full max-w-lg max-h-[80vh] flex flex-col">
+            <div class="flex items-center justify-between px-4 py-3 border-b">
+              <h2 id="source-modal-title" class="text-sm font-medium text-gray-900 truncate pr-4" />
+              <button
+                id="source-modal-close"
+                type="button"
+                class="text-gray-400 hover:text-gray-600 text-xl leading-none"
+              >
+                &times;
+              </button>
+            </div>
+            <pre
+              id="source-modal-content"
+              class="p-4 text-sm text-gray-700 whitespace-pre-wrap overflow-y-auto"
+            />
+          </div>
+        </div>
+
         <script
           dangerouslySetInnerHTML={{
             __html: `
+const sourcesById = {};
+
+function openSource(id) {
+  const chunk = sourcesById[id];
+  if (!chunk) return;
+  document.getElementById('source-modal-title').textContent = chunk.source;
+  document.getElementById('source-modal-content').textContent = chunk.content;
+  document.getElementById('source-modal').classList.remove('hidden');
+}
+
+function closeSource() {
+  document.getElementById('source-modal').classList.add('hidden');
+}
+
+document.getElementById('source-modal-close').addEventListener('click', closeSource);
+document.getElementById('source-modal').addEventListener('click', (e) => {
+  if (e.target.id === 'source-modal') closeSource();
+});
+
+function renderSources(sources) {
+  const container = document.getElementById('sources');
+  container.innerHTML = '';
+  for (const chunk of sources) {
+    sourcesById[chunk.id] = chunk;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className =
+      'text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-2 py-1 rounded cursor-pointer';
+    btn.textContent = chunk.source;
+    btn.addEventListener('click', () => openSource(chunk.id));
+    container.appendChild(btn);
+  }
+}
+
 document.getElementById('ask-form').addEventListener('submit', async (e) => {
   e.preventDefault();
   const form = e.target;
@@ -52,9 +109,21 @@ document.getElementById('ask-form').addEventListener('submit', async (e) => {
   const query = form.query.value.trim();
 
   button.disabled = true;
+  Object.keys(sourcesById).forEach((k) => delete sourcesById[k]);
   result.className = 'mt-4 space-y-3';
-  result.innerHTML = '<div class="rounded-md p-4 text-sm bg-blue-50 text-blue-800">Thinking...</div>';
+  result.innerHTML =
+    '<div class="rounded-md p-4 text-sm bg-white shadow">' +
+      '<p class="font-medium text-gray-700 mb-2">Answer</p>' +
+      '<p id="answer" class="text-gray-900 whitespace-pre-wrap"></p>' +
+      '<div id="sources-wrap" class="hidden mt-3">' +
+        '<p class="text-xs text-gray-500 mb-2">Sources</p>' +
+        '<div id="sources" class="flex flex-wrap gap-2"></div>' +
+      '</div>' +
+    '</div>';
   result.classList.remove('hidden');
+
+  const answerEl = document.getElementById('answer');
+  let answer = '';
 
   try {
     const res = await fetch('/api/ask', {
@@ -62,19 +131,36 @@ document.getElementById('ask-form').addEventListener('submit', async (e) => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ query }),
     });
-    const data = await res.json();
-    if (!res.ok) throw new Error(data.message || 'Request failed');
+    if (!res.ok) {
+      const data = await res.json().catch(() => ({}));
+      throw new Error(data.message || 'Request failed');
+    }
 
-    const sources = data.sources?.length
-      ? '<p class="text-xs text-gray-500 mt-2">Sources: ' + data.sources.join(', ') + '</p>'
-      : '';
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = '';
 
-    result.innerHTML =
-      '<div class="rounded-md p-4 text-sm bg-white shadow">' +
-        '<p class="font-medium text-gray-700 mb-2">Answer</p>' +
-        '<p class="text-gray-900 whitespace-pre-wrap">' + data.answer + '</p>' +
-        sources +
-      '</div>';
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+
+      buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split('\\n');
+      buffer = lines.pop() || '';
+
+      for (const line of lines) {
+        if (!line.trim()) continue;
+        const msg = JSON.parse(line);
+
+        if (msg.type === 'sources') {
+          renderSources(msg.sources);
+          document.getElementById('sources-wrap').classList.remove('hidden');
+        } else if (msg.type === 'delta') {
+          answer += msg.text;
+          answerEl.textContent = answer;
+        }
+      }
+    }
   } catch (err) {
     result.innerHTML =
       '<div class="rounded-md p-4 text-sm bg-red-50 text-red-800">' +

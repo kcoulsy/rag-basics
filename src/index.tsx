@@ -1,4 +1,5 @@
 import { Hono } from "hono";
+import { stream } from "hono/streaming";
 import { z } from "@hono/zod-openapi";
 import { zValidator } from "@hono/zod-validator";
 import { chunkText } from "./chunk";
@@ -68,8 +69,16 @@ app.post("/api/ask", zValidator("json", z.object({ query: z.string() })), async 
   const context = relevantChunks
     .map((chunk, index) => `[${index + 1}] ${chunk.source}: ${chunk.content}`)
     .join("\n\n---\n\n");
-  const response = await openai.chat.completions.create({
+
+  const sources = relevantChunks.map((chunk) => ({
+    id: chunk.id,
+    source: chunk.source,
+    content: chunk.content,
+  }));
+
+  const completion = await openai.chat.completions.create({
     model: "gpt-4o-mini",
+    stream: true,
     messages: [
       {
         role: "system",
@@ -92,9 +101,19 @@ Be concise.
       },
     ],
   });
-  return c.json({
-    answer: response.choices[0].message.content,
-    sources: relevantChunks.map((chunk) => chunk.source),
+
+  c.header("Content-Type", "application/x-ndjson");
+  return stream(c, async (s) => {
+    await s.write(JSON.stringify({ type: "sources", sources }) + "\n");
+
+    for await (const chunk of completion) {
+      const text = chunk.choices[0]?.delta?.content;
+      if (text) {
+        await s.write(JSON.stringify({ type: "delta", text }) + "\n");
+      }
+    }
+
+    await s.write(JSON.stringify({ type: "done" }) + "\n");
   });
 });
 
