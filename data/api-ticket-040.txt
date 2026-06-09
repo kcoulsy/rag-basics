@@ -1,0 +1,8 @@
+Customer: Is there a sandbox API for testing?
+Agent: Yes. Toggle sandbox mode in Developers to get separate keys and a test data environment.
+Customer: Does sandbox data affect production?
+Agent: No. Sandbox and production are fully isolated. Keys cannot cross environments.
+Customer: Are rate limits the same?
+Agent: Sandbox limits are lower: 50 requests per minute to prevent abuse during development.
+Customer: Can we reset sandbox data?
+Agent: Yes. Use Reset Sandbox in developer settings. This deletes all test projects and cannot be undone.

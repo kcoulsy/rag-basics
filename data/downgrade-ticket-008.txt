@@ -1,0 +1,8 @@
+Customer: I'd like to downgrade from Pro to Basic.
+Agent: I can schedule that for you. Your Pro features remain active until the end of the current billing period.
+Customer: What happens to projects over the Basic limit?
+Agent: Basic allows up to 5 active projects. Projects beyond that become read-only until you upgrade or archive older ones.
+Customer: Will my automations keep running?
+Agent: Automations pause when you downgrade if they use Pro-only triggers. You'll receive an email listing affected workflows.
+Customer: Can I export my data before downgrading?
+Agent: Yes. Use Settings, then Data Export, to download a ZIP of all projects and attachments.

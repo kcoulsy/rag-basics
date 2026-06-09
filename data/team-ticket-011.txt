@@ -1,0 +1,8 @@
+Customer: How do I add teammates to my workspace?
+Agent: Go to Workspace Settings, then Members, and click Invite. Enter their email and choose a role.
+Customer: What roles are available?
+Agent: Owner, Admin, Editor, and Viewer. Only Owners can manage billing and delete the workspace.
+Customer: Is there a per-seat charge?
+Agent: Team workspaces require a Pro or Enterprise plan. Pro includes 5 seats; additional seats are billed monthly.
+Customer: Can editors delete projects?
+Agent: Editors can create and edit projects but cannot delete the workspace or manage billing.

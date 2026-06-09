@@ -1,0 +1,8 @@
+Customer: My account was suspended and I don't know why.
+Agent: The account was flagged for unusual API activity exceeding 10x normal usage.
+Customer: We ran a one-time data migration script over the weekend.
+Agent: That pattern triggered automated abuse detection. I've reviewed the logs and the activity looks legitimate.
+Customer: Can you restore access now?
+Agent: I've reinstated the account. To avoid future flags, use batch endpoints or contact us before large migrations.
+Customer: Is any data missing?
+Agent: No data was deleted. Only API access was temporarily restricted.

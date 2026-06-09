@@ -1,0 +1,8 @@
+Customer: The blender stopped working after two weeks.
+Agent: I'm sorry about that. Products under warranty qualify for replacement or refund.
+Customer: I don't have the receipt anymore.
+Agent: We can look up purchases tied to your email. I found order #88421 from March 3.
+Customer: Can I get a refund instead of a replacement?
+Agent: Yes. Defective items within 60 days can be refunded without return shipping in most regions.
+Customer: When will I see the money?
+Agent: Refunds for defective goods are processed within 3 business days of approval.

@@ -1,0 +1,8 @@
+Customer: We're a team of three on separate Basic accounts. Can we upgrade together?
+Agent: Yes. Create a team workspace and invite members. Billing consolidates under one Pro subscription.
+Customer: Do we lose individual project history?
+Agent: Projects can be migrated into the shared workspace. Personal drafts stay private unless you choose to share them.
+Customer: Is migration automatic?
+Agent: An Admin runs the migration wizard under Workspace Settings. It usually completes in under an hour.
+Customer: What if one person wants to stay on Basic?
+Agent: They can remain on a personal Basic account or leave the team workspace without affecting others.

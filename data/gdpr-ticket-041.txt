@@ -1,0 +1,8 @@
+Customer: Please delete my account under the right to be forgotten.
+Agent: I can start that process. Deletion is permanent after a 14-day grace period.
+Customer: Why is there a grace period?
+Agent: It prevents accidental deletion and allows you to cancel the request by logging in within 14 days.
+Customer: What about backups?
+Agent: Backups are purged within 30 days per our retention policy. Legal holds may extend retention if required.
+Customer: Will you notify third parties?
+Agent: We notify integrated services to delete linked data where we act as data controller.

@@ -1,0 +1,8 @@
+Customer: I'm getting too many email notifications.
+Agent: You can customize notifications under Settings, then Notifications.
+Customer: Can I turn off marketing emails but keep security alerts?
+Agent: Yes. Marketing, product updates, and security alerts are controlled separately.
+Customer: What counts as a security alert?
+Agent: New device logins, password changes, API key creation, and billing changes on your account.
+Customer: Can I get digest emails instead of instant ones?
+Agent: Pro and Enterprise plans support daily and weekly digests for project activity.

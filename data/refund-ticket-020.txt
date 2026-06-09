@@ -1,0 +1,8 @@
+Customer: My subscription renewed but I meant to cancel.
+Agent: I see the annual renewal posted yesterday. Was the auto-renewal reminder email received?
+Customer: I don't think so. I canceled mentally but never clicked anything.
+Agent: Our policy allows a full refund on annual renewals if you contact us within 14 days and haven't used paid features since renewal.
+Customer: I haven't logged in since the charge.
+Agent: You're eligible. I've submitted a refund request. Funds return to your card in 5 to 10 business days.
+Customer: Will my account stay active?
+Agent: Access continues until the refund posts, then the account reverts to the free tier.

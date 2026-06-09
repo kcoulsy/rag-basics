@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [
       devServer({
-        entry: "src/index.ts",
+        entry: "src/index.tsx",
       }),
     ],
   };

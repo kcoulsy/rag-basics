@@ -1,0 +1,8 @@
+Customer: I need to change the delivery address after ordering.
+Agent: Address changes are possible before the package ships. Your order is still in processing.
+Customer: The new address is 42 Oak Street, Portland.
+Agent: I've updated the shipping address. You'll receive a confirmation email shortly.
+Customer: Will that delay delivery?
+Agent: Processing time is unchanged. Estimated delivery remains March 18 to March 20.
+Customer: What if it had already shipped?
+Agent: Then we'd contact the carrier for intercept. Success isn't guaranteed and may incur a fee.

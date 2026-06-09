@@ -1,0 +1,8 @@
+Customer: I'm hitting API rate limits on my integration.
+Agent: Free and Basic plans allow 100 requests per minute. Pro allows 1,000 per minute.
+Customer: We're on Pro but still seeing 429 errors.
+Agent: Let me check your usage. I see bursts above 2,000 requests per minute from a single API key.
+Customer: Is that from retries?
+Agent: Likely. Exponential backoff is recommended. Retrying immediately counts toward the same window.
+Customer: Can we get a higher limit?
+Agent: Enterprise plans support custom rate limits. I can connect you with sales if you'd like a quote.

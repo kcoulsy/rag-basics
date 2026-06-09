@@ -1,0 +1,8 @@
+Customer: Do you offer a student discount?
+Agent: Yes. Students receive 50% off Pro for up to four years with a valid .edu email or SheerID verification.
+Customer: How do I apply?
+Agent: Visit our pricing page and click Student Discount. You'll be redirected to verify your enrollment status.
+Customer: Does it work for part-time students?
+Agent: Yes, as long as you're currently enrolled at an accredited institution.
+Customer: What happens when I graduate?
+Agent: The discount remains until your verification expires or four years pass, whichever comes first. We'll notify you 30 days before standard pricing resumes.

@@ -1,0 +1,8 @@
+Customer: Why was VAT added to my subscription?
+Agent: VAT is applied based on your billing country. Your account is registered in Germany, so 19% VAT applies.
+Customer: We're a registered business. Can VAT be removed?
+Agent: Add your valid EU VAT ID in Billing Profile. Once verified, reverse-charge applies and VAT is removed from future invoices.
+Customer: How long does VAT ID verification take?
+Agent: Usually within one business day. You'll receive a confirmation email when verification completes.
+Customer: Can past invoices be corrected?
+Agent: We can issue credit notes and reissue invoices for the last 90 days after VAT ID verification.

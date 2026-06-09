@@ -1,0 +1,8 @@
+Customer: I got an alert about a login from another country.
+Agent: I see a successful login from São Paulo, Brazil, 20 minutes ago on Chrome for Windows.
+Customer: That wasn't me. I'm in Canada.
+Agent: I've locked the account and revoked all active sessions immediately.
+Customer: Is my payment info safe?
+Agent: Payment methods are tokenized and weren't exposed. I recommend changing your password and enabling two-factor authentication.
+Customer: How do I enable 2FA?
+Agent: Go to Settings, Security, then Two-Factor Authentication, and follow the setup for an authenticator app or SMS.

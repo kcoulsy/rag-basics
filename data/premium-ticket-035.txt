@@ -1,0 +1,8 @@
+Customer: I upgraded to Premium but don't see API access.
+Agent: API access requires generating a key under Settings, then Developers.
+Customer: The Developers tab isn't visible.
+Agent: Your workspace role is Viewer. Only Owners and Admins can manage API keys.
+Customer: Can my admin enable it for me?
+Agent: Yes. Ask an Admin to either create a key for you or promote you to Editor with API permissions.
+Customer: Are there usage limits on Premium?
+Agent: Premium includes 1,000 API requests per minute and 5 million per month.

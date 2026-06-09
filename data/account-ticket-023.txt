@@ -1,0 +1,8 @@
+Customer: I want to merge two accounts into one.
+Agent: We can merge data from a secondary account into your primary account upon verification.
+Customer: Both use my work email with plus addressing.
+Agent: Please confirm ownership of both accounts via the verification links we'll send to each address.
+Customer: What gets merged?
+Agent: Projects, billing history, and support tickets transfer to the primary account. The secondary account is then closed.
+Customer: Will I lose anything?
+Agent: Duplicate project names are renamed automatically. You'll review a merge summary before we finalize.

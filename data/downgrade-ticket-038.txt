@@ -1,0 +1,8 @@
+Customer: I downgraded last month but I'm still being charged Pro prices.
+Agent: Let me check. Your downgrade was scheduled for February 28 but a failed payment retry extended Pro access.
+Customer: So I was charged again by mistake?
+Agent: The charge was valid because Pro remained active while we retried payment. I've applied a credit for the overlap.
+Customer: When does Basic pricing start?
+Agent: Basic pricing begins on your next invoice, April 1. The credit covers the difference for March.
+Customer: Will my automations work on Basic?
+Agent: Only automations within Basic limits will run. Others stay paused until you upgrade or remove them.

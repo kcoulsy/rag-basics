@@ -1,0 +1,8 @@
+Customer: The mobile app crashes when I open large PDFs.
+Agent: I'm sorry you're experiencing that. Which device and app version are you using?
+Customer: iPhone 15, app version 4.2.1.
+Agent: There's a known issue with PDFs over 25MB on iOS 18. A fix is scheduled for version 4.2.3 next week.
+Customer: Is there a workaround?
+Agent: Open the file in the web app or split large PDFs before uploading. Files under 25MB should open normally.
+Customer: Will I be notified when the fix ships?
+Agent: Yes. Enable push notifications in the app to receive update alerts.

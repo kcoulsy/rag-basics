@@ -1,0 +1,7 @@
+Customer: I was charged twice for the same month.
+Agent: I see two charges of $29 on March 1 and March 2. Let me investigate.
+Agent: The second charge was a retry after a temporary payment processor outage. Both authorizations posted.
+Customer: So it's a duplicate?
+Agent: Correct. I've initiated a refund for the March 2 charge. It should appear in 5 to 7 business days.
+Customer: Can you make sure it doesn't happen again?
+Agent: I've added a note to your account so billing won't retry if a charge already succeeded the same cycle.

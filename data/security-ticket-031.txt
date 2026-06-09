@@ -1,0 +1,8 @@
+Customer: Is my account protected if I reuse a password from another site?
+Agent: We hash passwords and never store them in plain text, but reused passwords are risky if another site is breached.
+Customer: Should I change it?
+Agent: Yes. Use a unique password and enable two-factor authentication for stronger protection.
+Customer: Do you support passkeys?
+Agent: Yes. Passkeys are available on web and mobile under Settings, Security, then Passkeys.
+Customer: If I add a passkey, can I still use my password?
+Agent: Yes. Passkeys are an additional sign-in method. Your password remains active unless you disable it.

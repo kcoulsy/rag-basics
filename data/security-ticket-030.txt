@@ -1,0 +1,8 @@
+Customer: Someone created an API key I don't recognize.
+Agent: I see an API key named "backup-sync" created three days ago from IP 203.0.113.44.
+Customer: I didn't create that. Please delete it.
+Agent: I've revoked the key. All requests using it will fail immediately.
+Customer: Could they access my projects?
+Agent: The key had read-only scope, so no edits or deletions were possible. Audit logs show 47 read requests.
+Customer: Should I rotate my other keys?
+Agent: Yes. Revoke unused keys and create new ones. Enable IP allowlisting on Enterprise if you need stricter control.

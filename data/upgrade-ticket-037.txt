@@ -1,0 +1,8 @@
+Customer: I upgraded to Pro during a sale. Will I keep the discount at renewal?
+Agent: Promotional pricing applies for the first billing period unless the offer states otherwise.
+Customer: My email said 30% off for 12 months.
+Agent: I see that promotion on your account. The discount renews automatically for 11 more months.
+Customer: What happens after 12 months?
+Agent: Billing reverts to standard Pro pricing. We'll email you 30 days before the promotional period ends.
+Customer: Can I cancel before the price goes up?
+Agent: Yes. Cancel anytime. Access continues through the end of the paid period.

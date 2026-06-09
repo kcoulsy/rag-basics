@@ -1,0 +1,8 @@
+Customer: Do you ship to PO boxes?
+Agent: Standard shipping supports PO boxes via USPS. Express and overnight carriers require a street address.
+Customer: I only have a PO box on a military base.
+Agent: We ship to APO, FPO, and DPO addresses using USPS. Delivery times are typically 2 to 4 weeks.
+Customer: Are there item restrictions?
+Agent: Lithium batteries and certain electronics can't ship to military addresses. Your cart item, a paperback book, is allowed.
+Customer: Is tracking available?
+Agent: Tracking is available once the package leaves our warehouse and enters the military mail system.

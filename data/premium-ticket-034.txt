@@ -1,0 +1,8 @@
+Customer: Does Premium include phone support?
+Agent: Premium includes priority email support with a 24-hour SLA. Phone support is Enterprise only.
+Customer: What's the difference between priority email and standard?
+Agent: Priority tickets are routed to a senior queue and typically answered within 4 to 8 hours on business days.
+Customer: Is weekend support included?
+Agent: Premium covers weekend email support for severity-1 outages. General questions are answered Monday through Friday.
+Customer: How do I mark a ticket urgent?
+Agent: Select "Production outage" when submitting. Misuse of urgent flags may limit priority access.

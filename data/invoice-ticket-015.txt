@@ -1,0 +1,8 @@
+Customer: I need an invoice for my last payment for accounting.
+Agent: Invoices are available under Settings, then Billing, then Invoice History.
+Customer: Can I add our company VAT number?
+Agent: Yes. Add billing details including VAT ID under Billing Profile before your next charge. Past invoices can be regenerated with updated details on request.
+Customer: The PDF doesn't show our PO number.
+Agent: Add a PO number in the Billing Profile custom field. It appears on all future invoices.
+Customer: Can invoices be sent automatically to our finance team?
+Agent: Enterprise plans support multiple billing contacts and automatic invoice forwarding.

@@ -1,0 +1,9 @@
+Customer: My card was declined but I was still charged.
+Agent: I'm sorry about that. Let me pull up your billing history.
+Agent: I see a pending authorization that failed, followed by a successful charge on a backup payment method.
+Customer: I didn't know I had a backup card on file.
+Agent: You added a Visa ending in 4421 during checkout last month. We use it only when the primary card fails.
+Customer: Can I remove the backup card?
+Agent: Yes. Go to Settings, then Billing, and remove any saved payment methods you no longer want stored.
+Customer: Will I get a refund for the duplicate attempt?
+Agent: Failed authorizations are never captured. Only the successful charge stands, so no refund is needed for the declined attempt.

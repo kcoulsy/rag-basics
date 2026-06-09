@@ -1,0 +1,8 @@
+Customer: I changed my email but confirmations still go to the old address.
+Agent: Let me check your profile. The new email is verified but notifications still point to the legacy address.
+Customer: I updated it last Tuesday.
+Agent: Some notification channels cache the old email until you update them individually under Notification Preferences.
+Customer: Which ones need updating?
+Agent: Billing alerts and security notifications have separate recipient fields from your login email.
+Customer: Can you fix it on your end?
+Agent: I've synced billing and security contacts to your new email. You should see changes within 15 minutes.

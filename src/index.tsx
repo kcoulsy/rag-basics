@@ -6,11 +6,17 @@ import { cosineSimilarity } from "./vector";
 import { embedText, openai } from "./openai";
 import { insertChunk, listChunks } from "./store";
 import { retrieveRelevantChunks } from "./retrieve";
+import { IngestPage } from "./pages/ingest";
+import { AskPage } from "./pages/ask";
 
 const app = new Hono();
 
 app.get("/", (c) => {
-  return c.json({ message: "Hello from Hono!" });
+  return c.html(<IngestPage />);
+});
+
+app.get("/ask", (c) => {
+  return c.html(<AskPage />);
 });
 
 app.post("/api/chunk", zValidator("json", z.object({ text: z.string() })), async (c) => {

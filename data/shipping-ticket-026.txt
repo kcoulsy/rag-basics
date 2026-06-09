@@ -1,0 +1,8 @@
+Customer: Tracking says delivered but I never got the package.
+Agent: I'm sorry to hear that. The carrier marked it delivered at 2:14 PM yesterday to your front porch.
+Customer: I was home all day and nothing arrived.
+Agent: We'll open a carrier investigation. That typically takes 3 to 5 business days.
+Customer: What if they can't find it?
+Agent: If the investigation is inconclusive, we ship a replacement or issue a full refund at your choice.
+Customer: Can you expedite a replacement?
+Agent: Yes. I've queued a replacement with express shipping at no extra charge while the investigation runs.

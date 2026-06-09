@@ -1,0 +1,8 @@
+Customer: I want to upgrade from Basic to Pro.
+Agent: I can help with that. Pro unlocks advanced automations, 50GB storage, and email support with a 24-hour response SLA.
+Customer: When does the new price take effect?
+Agent: Upgrades are prorated immediately. You'll pay the difference for the remainder of your billing cycle.
+Customer: Do I keep my existing projects?
+Agent: Yes. All projects, files, and settings transfer automatically. Nothing is lost during an upgrade.
+Customer: Can I downgrade later if Pro isn't right for me?
+Agent: You can downgrade at any time. The change takes effect at the start of your next billing period.

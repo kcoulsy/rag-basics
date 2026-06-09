@@ -1,0 +1,8 @@
+Customer: Can I pay annually instead of monthly?
+Agent: Yes. Annual billing saves 20% compared to paying month to month.
+Customer: If I switch mid-cycle, what happens?
+Agent: We credit unused monthly time toward the annual plan and charge the prorated difference.
+Customer: When does the annual period start?
+Agent: It starts immediately upon switch. Your renewal date moves to one year from the conversion date.
+Customer: Can I go back to monthly later?
+Agent: You can switch at renewal. Mid-cycle switches from annual to monthly aren't supported.

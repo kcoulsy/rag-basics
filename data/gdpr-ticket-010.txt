@@ -1,0 +1,8 @@
+Customer: I need a copy of all personal data you hold about me.
+Agent: You can request a data export under GDPR from Settings, then Privacy, then Download My Data.
+Customer: How long does that take?
+Agent: Exports are usually ready within 48 hours. You'll receive an email with a secure download link valid for 7 days.
+Customer: Can I request deletion at the same time?
+Agent: Yes, but deletion is irreversible. We recommend downloading your export first.
+Customer: What data is included?
+Agent: Profile information, billing history, project metadata, audit logs, and support ticket history tied to your account.

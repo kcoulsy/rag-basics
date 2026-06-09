@@ -1,0 +1,8 @@
+Customer: I bought the wrong size jacket and want a refund.
+Agent: We accept returns within 30 days if tags are attached and the item is unworn.
+Customer: I wore it once to try it on at home.
+Agent: Items showing signs of wear may receive a partial refund or store credit at our discretion.
+Customer: I'd prefer a full refund. It still has tags.
+Agent: If tags are intact and there's no damage, a full refund applies once we receive the return.
+Customer: How do I start the return?
+Agent: Open your order in Account, then Orders, and click Start Return. We'll email a prepaid label within an hour.

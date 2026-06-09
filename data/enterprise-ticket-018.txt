@@ -1,0 +1,8 @@
+Customer: We're evaluating Enterprise for 200 users.
+Agent: Enterprise includes SSO, dedicated support, custom SLAs, and unlimited API rate limits.
+Customer: Is on-premise deployment available?
+Agent: We offer a private cloud option on AWS or Azure. Full on-premise is available for contracts above 500 seats.
+Customer: What's the typical onboarding timeline?
+Agent: Most deployments complete in 4 to 6 weeks including SSO setup, data migration, and admin training.
+Customer: Can we get a sandbox environment?
+Agent: Yes. Sales can provision a 30-day pilot workspace with up to 25 users at no charge.

@@ -1,0 +1,8 @@
+Customer: Our webhook endpoint keeps timing out.
+Agent: Webhooks must respond with 2xx within 10 seconds or we retry with exponential backoff.
+Customer: Our handler does heavy processing on each event.
+Agent: Acknowledge immediately with 200 and process asynchronously in a background job.
+Customer: How many retries do you attempt?
+Agent: Up to 8 retries over 24 hours. After that, failed events appear in the webhook dead-letter log.
+Customer: Can we replay failed events?
+Agent: Yes. Open Developers, Webhooks, then Failed Deliveries, and replay individual events or batches.
