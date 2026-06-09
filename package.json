@@ -8,19 +8,31 @@
     "build": "vite build",
     "preview": "vite preview",
     "fmt": "oxfmt",
-    "fmt:check": "oxfmt --check"
+    "fmt:check": "oxfmt --check",
+    "db:up": "podman compose up -d",
+    "db:down": "podman compose down",
+    "db:reset": "podman compose down -v && podman compose up -d",
+    "db:logs": "podman compose logs -f postgres",
+    "db:generate": "drizzle-kit generate",
+    "db:push": "drizzle-kit push",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
     "@hono/zod-openapi": "^1.4.0",
     "@hono/zod-validator": "^0.8.0",
+    "drizzle-orm": "^0.45.2",
     "hono": "^4.12.23",
     "openai": "^6.42.0",
     "oxfmt": "^0.53.0",
+    "pg": "^8.21.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {
     "@hono/vite-dev-server": "^0.26.0",
     "@types/node": "^25.9.2",
+    "@types/pg": "^8.20.0",
+    "drizzle-kit": "^0.31.10",
     "typescript": "~6.0.2",
     "vite": "^8.0.12"
   }

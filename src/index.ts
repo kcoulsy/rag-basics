@@ -4,7 +4,7 @@ import { zValidator } from "@hono/zod-validator";
 import { chunkText } from "./chunk";
 import { cosineSimilarity } from "./vector";
 import { embedText, openai } from "./openai";
-import { storedChunks } from "./store";
+import { insertChunk, listChunks } from "./store";
 import { retrieveRelevantChunks } from "./retrieve";
 
 const app = new Hono();
@@ -38,7 +38,7 @@ app.post(
 
     for (const chunk of chunks) {
       const embedding = await embedText(chunk);
-      storedChunks.push({
+      await insertChunk({
         id: crypto.randomUUID(),
         source,
         content: chunk,
@@ -50,8 +50,9 @@ app.post(
   },
 );
 
-app.get("/api/chunks", (c) => {
-  return c.json({ chunks: storedChunks });
+app.get("/api/chunks", async (c) => {
+  const chunks = await listChunks();
+  return c.json({ chunks });
 });
 
 app.post("/api/ask", zValidator("json", z.object({ query: z.string() })), async (c) => {
