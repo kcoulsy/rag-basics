@@ -1,0 +1,20 @@
+info:
+  name: Ask
+  type: http
+
+http:
+  method: POST
+  url: http://localhost:5173/api/ask
+  body:
+    type: json
+    data: |-
+      {
+        "query": "how long do I get to cancel"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

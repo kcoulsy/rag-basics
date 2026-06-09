@@ -1,0 +1,7 @@
+Customer: My package hasn't arrived.
+Agent: Let me check your order.
+Agent: I can see your package was delayed due to severe weather conditions affecting the distribution center.
+Customer: When should it arrive?
+Agent: The revised delivery estimate is 3 to 5 business days.
+Customer: Will I be notified?
+Agent: Yes. You'll receive email updates whenever the shipment status changes.

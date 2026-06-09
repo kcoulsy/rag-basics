@@ -1,0 +1,8 @@
+Customer: I can't log into my account.
+Agent: Have you tried resetting your password?
+Customer: Not yet.
+Agent: You can use the "Forgot Password" link on the login page.
+Customer: How long does the reset link last?
+Agent: Password reset links remain valid for 24 hours.
+Customer: What if I don't receive the email?
+Agent: Please check your spam folder and verify your registered email address.

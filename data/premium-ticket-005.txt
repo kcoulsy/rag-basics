@@ -1,0 +1,6 @@
+Customer: What features are included in Premium?
+Agent: Premium includes unlimited projects, advanced reporting, API access, and priority support.
+Customer: Is there a storage limit?
+Agent: Premium accounts include 1TB of cloud storage.
+Customer: Can multiple users share one account?
+Agent: No. Each user requires their own account, but team workspaces are available.

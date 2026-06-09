@@ -1,0 +1,8 @@
+Customer: Hi, I'd like to return my wireless headphones.
+Agent: Certainly. When did you purchase them?
+Customer: About three weeks ago.
+Agent: Our refund policy allows returns within 30 days of purchase provided the item is in its original condition.
+Customer: The headphones are unused and still in the box.
+Agent: Great. Once we receive the item, refunds are processed within 5 business days.
+Customer: Do I need to pay return shipping?
+Agent: Return shipping is free for products returned within the 30-day refund period.

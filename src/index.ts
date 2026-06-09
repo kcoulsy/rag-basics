@@ -3,8 +3,9 @@ import { z } from "@hono/zod-openapi";
 import { zValidator } from "@hono/zod-validator";
 import { chunkText } from "./chunk";
 import { cosineSimilarity } from "./vector";
-import { embedText } from "./openai";
+import { embedText, openai } from "./openai";
 import { storedChunks } from "./store";
+import { retrieveRelevantChunks } from "./retrieve";
 
 const app = new Hono();
 
@@ -53,8 +54,41 @@ app.get("/api/chunks", (c) => {
   return c.json({ chunks: storedChunks });
 });
 
-app.get("/api/hello", (c) => {
-  return c.json({ message: "Hello from Hono!" });
+app.post("/api/ask", zValidator("json", z.object({ query: z.string() })), async (c) => {
+  const { query } = c.req.valid("json");
+  const relevantChunks = await retrieveRelevantChunks(query);
+
+  const context = relevantChunks
+    .map((chunk, index) => `[${index + 1}] ${chunk.source}: ${chunk.content}`)
+    .join("\n\n---\n\n");
+  const response = await openai.chat.completions.create({
+    model: "gpt-4o-mini",
+    messages: [
+      {
+        role: "system",
+        content: `
+You answer questions using only the provided context.
+
+If the answer is not in the context, say:
+"I don't know based on the provided documents."
+
+Be concise.
+      `.trim(),
+      },
+      {
+        role: "user",
+        content: `
+        Question: ${query}
+
+        Context: ${context}
+        `.trim(),
+      },
+    ],
+  });
+  return c.json({
+    answer: response.choices[0].message.content,
+    sources: relevantChunks.map((chunk) => chunk.source),
+  });
 });
 
 export default app;

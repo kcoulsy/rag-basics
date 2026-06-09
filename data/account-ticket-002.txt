@@ -1,0 +1,8 @@
+Customer: I'd like to cancel my subscription.
+Agent: I can help with that. Your subscription will remain active until the end of the current billing period.
+Customer: Will I receive a refund?
+Agent: Monthly subscriptions are non-refundable once a billing cycle has started.
+Customer: What happens to my data?
+Agent: We retain account data for 90 days after cancellation. After that it is permanently deleted.
+Customer: Can I reactivate before then?
+Agent: Yes, you can reactivate your account during the 90-day retention period.
